@@ -1,0 +1,18 @@
+{
+  "name": "cypress-ntt-ambev",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "cy:web": "cypress run --spec 'cypress/e2e/web/**/*.spec.ts'",
+    "cy:api": "cypress run --spec 'cypress/e2e/api/**/*.spec.ts'",
+    "test:all:headless": "cypress run --browser chrome",
+    "test:all": "cypress open --browser chrome"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.9.0",
+    "cypress": "^13.13.0",
+    "cypress-plugin-api": "^2.11.2",
+    "typescript": "^5.5.4"
+  }
+}

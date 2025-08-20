@@ -1,0 +1,1 @@
+export class BasePage { open(path: string) { cy.visit(path); } }

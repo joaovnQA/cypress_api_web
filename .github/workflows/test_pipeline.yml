@@ -1,0 +1,42 @@
+name: API and WEB Tests
+
+on:
+  push:
+    branches: [master, develop]
+  pull_request:
+    branches: [master, develop]
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: "npm"
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Run WEB
+        run: npx cypress run --spec "cypress/e2e/web/**/*.spec.ts" --browser chrome
+        env:
+          CYPRESS_baseUrl: "https://front.serverest.dev"
+          CYPRESS_apiUrl: "https://serverest.dev"
+
+      - name: Run API
+        run: npx cypress run --spec "cypress/e2e/api/**/*.spec.ts"
+        env:
+          CYPRESS_apiUrl: "https://serverest.dev"
+
+      - name: Upload artifacts on fail
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-artifacts
+          path: |
+            cypress/screenshots
+            cypress/videos
+          if-no-files-found: ignore

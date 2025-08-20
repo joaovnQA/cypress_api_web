@@ -1,0 +1,6 @@
+# Node modules
+node_modules/
+
+# Cypress videos e screenshots
+cypress/api/
+cypress/web/
