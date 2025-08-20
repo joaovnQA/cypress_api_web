@@ -2,15 +2,11 @@
 
 ## 📋 **Descrição**
 
-Esses projeto de teste tem como objetivo validar com cypress, testes  de Frontend no endereço https://front.serverest.dev/ e testes de API no endpoint https://serverest.dev/
-
----
+Este projeto de teste tem como objetivo validar com cypress, testes  de Frontend no endereço https://front.serverest.dev/ e testes de API no endpoint https://serverest.dev/
 
 ## 🚀 **Funcionalidades**
 
 - ✅ Testes automatizados com **Cypress** para API e WEB.
-
----
 
 ## 🛠️ **Tecnologias Utilizadas**
 
