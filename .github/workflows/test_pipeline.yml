@@ -2,9 +2,9 @@ name: API and WEB Tests
 
 on:
   push:
-    branches: [master, develop]
+    branches: [main]
   pull_request:
-    branches: [master, develop]
+    branches: [main]
 
 jobs:
   tests:
