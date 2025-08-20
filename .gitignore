@@ -2,5 +2,5 @@
 node_modules/
 
 # Cypress videos e screenshots
-cypress/api/api
-cypress/web/web
+cypress/videos/api
+cypress/videos/web
